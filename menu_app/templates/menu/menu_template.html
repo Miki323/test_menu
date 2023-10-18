@@ -1,0 +1,14 @@
+<ul>
+    {% for item in items %}
+        <!--Устанавливаем класс активного пункта меню-->
+        <li {% if item.is_active %}class="active"{% endif %}>
+            <a href="?slug={{ item.slug }}">{{ item.title }}</a>
+        </li>
+
+        {% if item.child_items %}
+            <!-- Если у элемента есть дочерние пункты, включаем рекурсивно шаблон для отображения подменю -->
+            {% include "menu/menu_template.html" with items=item.child_items %}
+        {% endif %}
+
+    {% endfor %}
+</ul>

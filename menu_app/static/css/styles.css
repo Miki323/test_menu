@@ -1,0 +1,35 @@
+.app{
+    background-color: #ffffba;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 10px 0;
+    border: 1px solid #ccc;
+}
+
+li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+.active {
+    background-color: #baffc9;
+}
+
+.submenu {
+    display: none;
+}
+
+.active .submenu {
+    display: block;
+}
